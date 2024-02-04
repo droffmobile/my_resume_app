@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_resume_app/common/constants/app_strings.dart';
 import 'package:my_resume_app/home/title_button.dart';
 
 class TitleLinks extends StatelessWidget {
@@ -6,24 +7,24 @@ class TitleLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      // mainAxisAlignment: MainAxisAlignment.center,
+    return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         TitleButton(
           onPressed: () {},
-          label: 'HOME',
+          label: AppStrings.home,
         ),
         TitleButton(
           onPressed: () {},
-          label: 'PROFESSIONAL',
+          label: AppStrings.professional,
         ),
         TitleButton(
           onPressed: () {},
-          label: 'EXPERIENCE',
+          label: AppStrings.experience,
         ),
         TitleButton(
           onPressed: () {},
-          label: 'CONTACT',
+          label: AppStrings.contact,
         ),
       ],
     );

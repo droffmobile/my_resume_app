@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_resume_app/common/constants/app_strings.dart';
 
 class ResumeHeader extends StatelessWidget {
   const ResumeHeader({super.key});
@@ -26,13 +27,13 @@ class ResumeHeader extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("I'M\nDAVID\nROFF.",
+                  Text(AppStrings.whoIAm,
                       style: TextStyle(
                           fontSize: 48,
                           fontWeight: FontWeight.bold,
                           color: Colors.white30)),
                   SizedBox(height: 20),
-                  Text("MOBILE SOFTWARE ENGINEER",
+                  Text(AppStrings.whatIDo,
                       style: TextStyle(
                         fontSize: 36,
                         color: Colors.white30,
@@ -42,27 +43,27 @@ class ResumeHeader extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: "Flutter",
+                          text: AppStrings.flutter,
                           style: TextStyle(color: Color(0xFF5FC5F5)),
                         ),
                         TextSpan(
-                          text: " / ",
+                          text: AppStrings.divider,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white30),
                         ),
                         TextSpan(
-                          text: "iOS",
+                          text: AppStrings.iOS,
                           style: TextStyle(color: Color(0xFF1D71F1)),
                         ),
                         TextSpan(
-                          text: " / ",
+                          text: AppStrings.divider,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white30),
                         ),
                         TextSpan(
-                          text: "Android",
+                          text: AppStrings.android,
                           style: TextStyle(color: Color(0xFF3ddc84)),
                         ),
                       ],
