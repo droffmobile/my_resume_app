@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_resume_app/home_page.dart';
+import 'package:my_resume_app/home/home_page.dart';
 
 class ResumeApp extends StatelessWidget {
   const ResumeApp({super.key});
@@ -9,9 +9,9 @@ class ResumeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: '@DR',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: 'RobotoMono',
         useMaterial3: true,
       ),
       home: const MyHomePage(),
