@@ -2,6 +2,7 @@ import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:my_resume_app/common/widgets/resume_appbar.dart';
 import 'package:my_resume_app/home/about_my_work.dart';
+import 'package:my_resume_app/home/professional_info.dart';
 import 'package:my_resume_app/home/resume_header.dart';
 import 'package:my_resume_app/home/resume_nav_drawer.dart';
 
@@ -25,10 +26,13 @@ class MyHomePage extends StatelessWidget {
                 ResumeHeader(),
                 AboutMyWork(),
               ],
-            )
+            ),
+            const SizedBox(height: 20),
+            const ProfessionalInfo(),
           ],
         ),
       ),
     );
   }
 }
+

@@ -8,7 +8,6 @@ class ResumeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     return Stack(
-      clipBehavior: Clip.none,
       children: [
         Container(
           color: Colors.black26,

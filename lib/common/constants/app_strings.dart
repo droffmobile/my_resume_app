@@ -1,7 +1,7 @@
 class AppStrings {
   //AboutMyWork
   static const aboutMyWork =
-      'Software Engineer with 15+ years of experience on Agile software delivery teams. Passionate at delivering well-tested quality software that delights users. Skilled at writing clear, concise, and modularized code that is easy to maintain and troubleshoot.';
+      'Software Engineer with 15+ years of experience on software delivery teams. Passionate at delivering well-tested quality software that delights users. Skilled at writing clear, concise, and modularized code that is easy to maintain and troubleshoot.';
 
   //ResumeHeader
   static const whoIAm = 'I\'M\nDAVID\nROFF.';
@@ -16,4 +16,11 @@ class AppStrings {
   static const professional = 'PROFESSIONAL';
   static const experience = 'EXPERIENCE';
   static const contact = 'CONTACT';
+
+  //ProfessionalInfo
+  static const iosSdk = 'iOS SDK';
+  static const androidSdk = 'Android SDK';
+  static const swift = 'Swift';
+  static const objC = 'Objective C';
+  static const kotlin = 'Kotlin';
 }
