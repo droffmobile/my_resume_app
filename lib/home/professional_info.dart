@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:my_resume_app/common/constants/app_strings.dart';
 
@@ -11,7 +10,7 @@ class ProfessionalInfo extends StatelessWidget {
       color: Colors.black26,
       width: double.infinity,
       child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 32),
+        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         child: Column(
           children: [
             Text(
