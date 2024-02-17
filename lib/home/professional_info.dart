@@ -17,7 +17,7 @@ class ProfessionalInfo extends StatelessWidget {
               '01 ${AppStrings.professional}',
               style: TextStyle(
                 color: Colors.white70,
-                fontSize: 46,
+                fontSize: 42,
               ),
               textAlign: TextAlign.center,
             ),

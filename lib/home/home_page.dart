@@ -218,7 +218,7 @@ class ExperienceTile extends StatelessWidget {
               employer,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 26,
+                fontSize: 22,
               ),
             ),
             Text(
@@ -234,6 +234,7 @@ class ExperienceTile extends StatelessWidget {
                 secondaryTitle!,
                 style: const TextStyle(
                   color: Color(0xFFB7BABC),
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
