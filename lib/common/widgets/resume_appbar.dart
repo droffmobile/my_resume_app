@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:my_resume_app/home/title_links.dart';
 
 class ResumeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ResumeAppBar({super.key});
+  const ResumeAppBar({
+    super.key,
+    required this.onTapHome,
+    required this.onTapProfessional,
+    required this.onTapExperience,
+    required this.onTapContact,
+  });
+
+  final VoidCallback onTapHome;
+  final VoidCallback onTapProfessional;
+  final VoidCallback onTapExperience;
+  final VoidCallback onTapContact;
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -12,7 +23,14 @@ class ResumeAppBar extends StatelessWidget implements PreferredSizeWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     return AppBar(
       elevation: 5,
-      title: screenWidth > 768 ? const TitleLinks() : null,
+      title: screenWidth > 768
+          ? TitleLinks(
+              onTapContact: onTapContact,
+              onTapExperience: onTapExperience,
+              onTapHome: onTapHome,
+              onTapProfessional: onTapProfessional,
+            )
+          : null,
       automaticallyImplyLeading: false,
       centerTitle: true,
       backgroundColor: Colors.transparent,

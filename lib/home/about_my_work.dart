@@ -50,7 +50,18 @@ class AboutMyWork extends StatelessWidget {
                 backgroundColor: const Color(0xFF224055),
                 foregroundColor: const Color(0xFF708090),
               ),
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (_) {
+                    return const AlertDialog(
+                      title: Text('Coming Soon!!'),
+                      content: Text(
+                          'Please check back later to see this awesome resume.'),
+                    );
+                  },
+                );
+              },
               child: const Text(
                 'DOWNLOAD RESUME',
               ),

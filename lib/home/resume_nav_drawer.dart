@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:my_resume_app/common/constants/app_strings.dart';
 
 class ResumeNavDrawer extends StatelessWidget {
-  const ResumeNavDrawer({super.key});
+  const ResumeNavDrawer({
+    super.key,
+    required this.onTapHome,
+    required this.onTapProfessional,
+    required this.onTapExperience,
+    required this.onTapContact,
+  });
+
+  final VoidCallback onTapHome;
+  final VoidCallback onTapProfessional;
+  final VoidCallback onTapExperience;
+  final VoidCallback onTapContact;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +27,7 @@ class ResumeNavDrawer extends StatelessWidget {
                 style: TextStyle(color: Color(0xFFc3dbeb))),
             onTap: () {
               Navigator.pop(context);
+              onTapHome();
             },
           ),
           ListTile(
@@ -23,6 +35,7 @@ class ResumeNavDrawer extends StatelessWidget {
                 style: TextStyle(color: Color(0xFFc3dbeb))),
             onTap: () {
               Navigator.pop(context);
+              onTapProfessional();
             },
           ),
           ListTile(
@@ -30,6 +43,7 @@ class ResumeNavDrawer extends StatelessWidget {
                 style: TextStyle(color: Color(0xFFc3dbeb))),
             onTap: () {
               Navigator.pop(context);
+              onTapExperience();
             },
           ),
           ListTile(
@@ -37,6 +51,7 @@ class ResumeNavDrawer extends StatelessWidget {
                 style: TextStyle(color: Color(0xFFc3dbeb))),
             onTap: () {
               Navigator.pop(context);
+              onTapContact();
             },
           ),
         ],
