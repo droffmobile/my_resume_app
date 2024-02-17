@@ -90,73 +90,92 @@ class ExperienceInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Text(
-          '02 ${AppStrings.experience}',
-          style: TextStyle(
-            color: Colors.white70,
-            fontSize: 46,
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            '02 ${AppStrings.experience}',
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 46,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 20),
-        TimelineTile(
-          alignment: TimelineAlign.center,
-          isFirst: true,
-          endChild: const ExperienceTile(
-            timeRange: 'Jan 2024 - Present',
-            employer: 'World Wide Technology',
-            title: 'Software Engineer IV',
-            secondaryTitle: 'Tech Lead',
-            description: AppStrings.experienceParagraph1,
-            alignment: Alignment.centerLeft,
+          const SizedBox(height: 20),
+          Container(
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: TimelineTile(
+              alignment: TimelineAlign.center,
+              isFirst: true,
+              endChild: const ExperienceTile(
+                timeRange: 'Jan 2024 - Present',
+                employer: 'World Wide Technology',
+                title: 'Software Engineer IV',
+                secondaryTitle: 'Tech Lead',
+                description: AppStrings.experienceParagraph1,
+                alignment: Alignment.centerLeft,
+              ),
+            ),
           ),
-        ),
-        TimelineTile(
-          alignment: TimelineAlign.center,
-          startChild: const ExperienceTile(
-            timeRange: 'Jun 2019 - Feb 2024',
-            employer: 'World Wide Technology',
-            title: 'Software Engineer III',
-            secondaryTitle: 'Tech Lead',
-            description: AppStrings.experienceParagraph2,
-            alignment: Alignment.centerRight,
+          Container(
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: TimelineTile(
+              alignment: TimelineAlign.center,
+              startChild: const ExperienceTile(
+                timeRange: 'Jun 2019 - Feb 2024',
+                employer: 'World Wide Technology',
+                title: 'Software Engineer III',
+                secondaryTitle: 'Tech Lead',
+                description: AppStrings.experienceParagraph2,
+                alignment: Alignment.centerRight,
+              ),
+            ),
           ),
-        ),
-        TimelineTile(
-          alignment: TimelineAlign.center,
-          endChild: const ExperienceTile(
-            timeRange: 'Feb 2019 - Jun 2019',
-            employer: 'World Wide Technology',
-            title: 'Developer Apprentice',
-            description: AppStrings.experienceParagraph3,
-            alignment: Alignment.centerLeft,
+          Container(
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: TimelineTile(
+              alignment: TimelineAlign.center,
+              endChild: const ExperienceTile(
+                timeRange: 'Feb 2019 - Jun 2019',
+                employer: 'World Wide Technology',
+                title: 'Developer Apprentice',
+                description: AppStrings.experienceParagraph3,
+                alignment: Alignment.centerLeft,
+              ),
+            ),
           ),
-        ),
-        TimelineTile(
-          alignment: TimelineAlign.center,
-          startChild: const ExperienceTile(
-            timeRange: 'Nov 2015 - Feb 2019',
-            employer: 'World Wide Technology',
-            title: 'Quality Advocate',
-            description: AppStrings.experienceParagraph4,
-            alignment: Alignment.centerRight,
+          Container(
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: TimelineTile(
+              alignment: TimelineAlign.center,
+              startChild: const ExperienceTile(
+                timeRange: 'Nov 2015 - Feb 2019',
+                employer: 'World Wide Technology',
+                title: 'Quality Advocate',
+                description: AppStrings.experienceParagraph4,
+                alignment: Alignment.centerRight,
+              ),
+            ),
           ),
-        ),
-        TimelineTile(
-          alignment: TimelineAlign.center,
-          isLast: true,
-          endChild: const ExperienceTile(
-            timeRange: 'Jan 2009 - Nov 2015',
-            employer: 'Scottrade',
-            title: 'QA Engineer',
-            description: AppStrings.experienceParagraph5,
-            alignment: Alignment.centerLeft,
+          Container(
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: TimelineTile(
+              alignment: TimelineAlign.center,
+              isLast: true,
+              endChild: const ExperienceTile(
+                timeRange: 'Jan 2009 - Nov 2015',
+                employer: 'Scottrade',
+                title: 'QA Engineer',
+                description: AppStrings.experienceParagraph5,
+                alignment: Alignment.centerLeft,
+              ),
+            ),
           ),
-        ),
-        const SizedBox(height: 32),
-      ],
+          const SizedBox(height: 32),
+        ],
+      ),
     );
   }
 }
