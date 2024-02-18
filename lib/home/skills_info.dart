@@ -12,61 +12,58 @@ class SkillsInfo extends StatelessWidget {
       width: double.infinity,
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-        child: Material(
-          type: MaterialType.transparency,
-          child: Column(
-            children: [
-              Text(
-                '01 ${AppStrings.skills}',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 42,
-                ),
-                textAlign: TextAlign.center,
+        child: Column(
+          children: [
+            Text(
+              '01 ${AppStrings.skills}',
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 42,
               ),
-              Text(
-                AppStrings.selfAssessment,
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 32,
-                ),
-                textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              AppStrings.selfAssessment,
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 32,
               ),
-              SizedBox(height: 20),
-              SkillTile(
-                  label: AppStrings.flutter,
-                  skillLevel: 0.9,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.iosSdk,
-                  skillLevel: 0.85,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.androidSdk,
-                  skillLevel: 0.7,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.swift,
-                  skillLevel: 0.85,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.objC,
-                  skillLevel: 0.6,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.kotlin,
-                  skillLevel: 0.7,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.agile,
-                  skillLevel: 0.9,
-                  description: AppStrings.flutterDesc),
-              SkillTile(
-                  label: AppStrings.tdd,
-                  skillLevel: 0.9,
-                  description: AppStrings.flutterDesc),
-            ],
-          ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            SkillTile(
+                label: AppStrings.flutter,
+                skillLevel: 0.9,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.iosSdk,
+                skillLevel: 0.85,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.androidSdk,
+                skillLevel: 0.7,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.swift,
+                skillLevel: 0.85,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.objC,
+                skillLevel: 0.6,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.kotlin,
+                skillLevel: 0.7,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.agile,
+                skillLevel: 0.9,
+                description: AppStrings.flutterDesc),
+            SkillTile(
+                label: AppStrings.tdd,
+                skillLevel: 0.9,
+                description: AppStrings.flutterDesc),
+          ],
         ),
       ),
     );
@@ -175,21 +172,31 @@ class SkillTile extends StatefulWidget {
 class _SkillTileState extends State<SkillTile> {
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-      ),
-      child: ExpansionTile(
-        tilePadding: EdgeInsets.zero,
-        iconColor: Colors.white70,
-        collapsedIconColor: Colors.white70,
-        controlAffinity: ListTileControlAffinity.leading,
-        title:
-            SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
-        children: [
-          Text(widget.description, style: const TextStyle(color: Colors.white))
-        ],
+    return Material(
+      type: MaterialType.transparency,
+      child: Theme(
+        data: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
+        child: ExpansionTile(
+          iconColor: Colors.white70,
+          collapsedIconColor: Colors.white70,
+          controlAffinity: ListTileControlAffinity.leading,
+          title:
+              SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
+          children: [
+            Material(
+              type: MaterialType.transparency,
+              child: ListTile(
+                title: Text(
+                  widget.description,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
