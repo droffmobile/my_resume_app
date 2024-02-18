@@ -172,35 +172,25 @@ class SkillTile extends StatefulWidget {
 class _SkillTileState extends State<SkillTile> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      type: MaterialType.transparency,
-      child: Theme(
-        data: ThemeData(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-        ),
-        child: ExpansionTile(
-          iconColor: Colors.white70,
-          collapsedIconColor: Colors.white70,
-          controlAffinity: ListTileControlAffinity.leading,
-          title:
-              SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
-          children: [
-            Material(
-              color: const Color(0xFF224055),
-              child: Container(
-                color: Colors.black26,
-                child: ListTile(
-                  title: Text(
-                    widget.description,
-                    style: const TextStyle(color: Colors.white70),
-                  ),
-                ),
+    return ExpansionTile(
+      iconColor: Colors.white70,
+      collapsedIconColor: Colors.white70,
+      controlAffinity: ListTileControlAffinity.leading,
+      title: SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
+      children: [
+        Material(
+          color: const Color(0xFF224055),
+          child: Container(
+            color: Colors.black26,
+            child: ListTile(
+              title: Text(
+                widget.description,
+                style: const TextStyle(color: Colors.white70),
               ),
-            )
-          ],
-        ),
-      ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
