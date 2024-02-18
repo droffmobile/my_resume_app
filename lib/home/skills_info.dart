@@ -1,3 +1,4 @@
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:my_resume_app/common/constants/app_strings.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -205,24 +206,20 @@ class _SkillTileState extends State<SkillTile> {
       data: ThemeData(
         splashFactory: NoSplash.splashFactory,
         highlightColor: Colors.transparent,
+        hoverColor: Colors.white24,
       ),
-      child: ExpansionTile(
-        iconColor: Colors.white70,
-        collapsedIconColor: Colors.white70,
-        controlAffinity: ListTileControlAffinity.leading,
+      child: ExpansionTileCard(
+        baseColor: Colors.transparent,
+        expandedColor: Colors.transparent,
+        trailing: const Icon(Icons.expand_more, color: Colors.white70),
+        animateTrailing: true,
         title:
             SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
         children: [
-          Material(
-            color: const Color(0xFF224055),
-            child: Container(
-              color: Colors.black26,
-              child: ListTile(
-                title: Text(
-                  widget.description,
-                  style: const TextStyle(color: Colors.white70),
-                ),
-              ),
+          ListTile(
+            title: Text(
+              widget.description,
+              style: const TextStyle(color: Colors.white70),
             ),
           )
         ],
