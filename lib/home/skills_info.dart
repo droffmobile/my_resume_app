@@ -7,14 +7,15 @@ class SkillsInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.black26,
       width: double.infinity,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         child: Column(
           children: [
-            Text(
+            const Text(
               '01 ${AppStrings.skills}',
               style: TextStyle(
                 color: Colors.white70,
@@ -22,47 +23,75 @@ class SkillsInfo extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            Text(
-              AppStrings.selfAssessment,
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 32,
-              ),
-              textAlign: TextAlign.center,
+            const SizedBox(height: 20),
+            Wrap(
+              children: [
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.flutter,
+                      skillLevel: 0.9,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.iosSdk,
+                      skillLevel: 0.85,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.androidSdk,
+                      skillLevel: 0.7,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.swift,
+                      skillLevel: 0.85,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.objC,
+                      skillLevel: 0.6,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.kotlin,
+                      skillLevel: 0.7,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.agile,
+                      skillLevel: 0.9,
+                      description: AppStrings.flutterDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.tdd,
+                      skillLevel: 0.9,
+                      description: AppStrings.flutterDesc),
+                ),
+              ],
             ),
-            SizedBox(height: 20),
-            SkillTile(
-                label: AppStrings.flutter,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.iosSdk,
-                skillLevel: 0.85,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.androidSdk,
-                skillLevel: 0.7,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.swift,
-                skillLevel: 0.85,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.objC,
-                skillLevel: 0.6,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.kotlin,
-                skillLevel: 0.7,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.agile,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.tdd,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
           ],
         ),
       ),
@@ -172,25 +201,32 @@ class SkillTile extends StatefulWidget {
 class _SkillTileState extends State<SkillTile> {
   @override
   Widget build(BuildContext context) {
-    return ExpansionTile(
-      iconColor: Colors.white70,
-      collapsedIconColor: Colors.white70,
-      controlAffinity: ListTileControlAffinity.leading,
-      title: SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
-      children: [
-        Material(
-          color: const Color(0xFF224055),
-          child: Container(
-            color: Colors.black26,
-            child: ListTile(
-              title: Text(
-                widget.description,
-                style: const TextStyle(color: Colors.white70),
+    return Theme(
+      data: ThemeData(
+        splashFactory: NoSplash.splashFactory,
+        highlightColor: Colors.transparent,
+      ),
+      child: ExpansionTile(
+        iconColor: Colors.white70,
+        collapsedIconColor: Colors.white70,
+        controlAffinity: ListTileControlAffinity.leading,
+        title:
+            SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
+        children: [
+          Material(
+            color: const Color(0xFF224055),
+            child: Container(
+              color: Colors.black26,
+              child: ListTile(
+                title: Text(
+                  widget.description,
+                  style: const TextStyle(color: Colors.white70),
+                ),
               ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }
