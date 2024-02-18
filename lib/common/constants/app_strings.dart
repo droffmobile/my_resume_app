@@ -27,6 +27,9 @@ class AppStrings {
   static const agile = 'Agile';
   static const tdd = 'Test Driven Development';
 
+  static const flutterDesc =
+      '\u2022 Relevant example of skill #1\n\u2022 Relevant example of skill #2\n\u2022 Relevant example of skill #3';
+
   static const experienceParagraph1 =
       '\u2022 Lead a team of combined Flutter, iOS, and Android devs in an incremental rewrite of native applications into Flutter for a national restaurant chain.';
   static const experienceParagraph2 =
