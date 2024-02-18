@@ -187,11 +187,11 @@ class _SkillTileState extends State<SkillTile> {
               SkillProgress(label: widget.label, skillLevel: widget.skillLevel),
           children: [
             Material(
-              type: MaterialType.transparency,
+              color: Colors.transparent,
               child: ListTile(
                 title: Text(
                   widget.description,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white70),
                 ),
               ),
             )
