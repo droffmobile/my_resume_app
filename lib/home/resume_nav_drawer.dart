@@ -31,7 +31,7 @@ class ResumeNavDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text(AppStrings.professional,
+            title: const Text(AppStrings.skills,
                 style: TextStyle(color: Color(0xFFc3dbeb))),
             onTap: () {
               Navigator.pop(context);

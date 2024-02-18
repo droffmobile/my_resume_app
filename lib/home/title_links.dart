@@ -27,7 +27,7 @@ class TitleLinks extends StatelessWidget {
         ),
         TitleButton(
           onPressed: onTapProfessional,
-          label: AppStrings.professional,
+          label: AppStrings.skills,
         ),
         TitleButton(
           onPressed: onTapExperience,
