@@ -12,58 +12,61 @@ class SkillsInfo extends StatelessWidget {
       width: double.infinity,
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-        child: Column(
-          children: [
-            Text(
-              '01 ${AppStrings.skills}',
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 42,
+        child: Material(
+          type: MaterialType.transparency,
+          child: Column(
+            children: [
+              Text(
+                '01 ${AppStrings.skills}',
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 42,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              AppStrings.selfAssessment,
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 32,
+              Text(
+                AppStrings.selfAssessment,
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 32,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 20),
-            SkillTile(
-                label: AppStrings.flutter,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.iosSdk,
-                skillLevel: 0.85,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.androidSdk,
-                skillLevel: 0.7,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.swift,
-                skillLevel: 0.85,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.objC,
-                skillLevel: 0.6,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.kotlin,
-                skillLevel: 0.7,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.agile,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
-            SkillTile(
-                label: AppStrings.tdd,
-                skillLevel: 0.9,
-                description: AppStrings.flutterDesc),
-          ],
+              SizedBox(height: 20),
+              SkillTile(
+                  label: AppStrings.flutter,
+                  skillLevel: 0.9,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.iosSdk,
+                  skillLevel: 0.85,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.androidSdk,
+                  skillLevel: 0.7,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.swift,
+                  skillLevel: 0.85,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.objC,
+                  skillLevel: 0.6,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.kotlin,
+                  skillLevel: 0.7,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.agile,
+                  skillLevel: 0.9,
+                  description: AppStrings.flutterDesc),
+              SkillTile(
+                  label: AppStrings.tdd,
+                  skillLevel: 0.9,
+                  description: AppStrings.flutterDesc),
+            ],
+          ),
         ),
       ),
     );
@@ -146,14 +149,6 @@ class _SkillProgressState extends State<SkillProgress>
                 ),
               ),
             ),
-            // const SizedBox(width: 20),
-            // Text(
-            //   '${(skillLevel * 100).toStringAsFixed(0)}%',
-            //   style: const TextStyle(
-            //     fontSize: 24,
-            //     color: Colors.white30,
-            //   ),
-            // ),
           ],
         ),
       ),
