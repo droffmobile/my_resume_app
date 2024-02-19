@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:my_resume_app/common/constants/app_strings.dart';
+import 'package:printing/printing.dart';
 
 class AboutMyWork extends StatelessWidget {
   const AboutMyWork({super.key});
@@ -51,15 +53,15 @@ class AboutMyWork extends StatelessWidget {
                 foregroundColor: const Color(0xFF708090),
               ),
               onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (_) {
-                    return const AlertDialog(
-                      title: Text('Coming Soon!!'),
-                      content: Text(
-                          'Please check back later to see this awesome resume.'),
-                    );
-                  },
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return PdfPreview(
+                          build: (format) => rootBundle
+                              .load('pdf/droff_resume.pdf')
+                              .then((value) => value.buffer.asUint8List()));
+                    },
+                  ),
                 );
               },
               child: const Text(

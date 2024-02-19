@@ -5,7 +5,7 @@ class ContactInfo extends StatelessWidget {
   const ContactInfo({super.key});
 
   _launchLinkedIn() async {
-    final url = Uri.parse('https://www.linkedin.com/in/droff75/');
+    final url = Uri.parse('https://www.linkedin.com/in/droffdev/');
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }

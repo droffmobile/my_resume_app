@@ -31,8 +31,8 @@ class SkillsInfo extends StatelessWidget {
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
-                      label: AppStrings.flutter,
-                      skillLevel: 0.9,
+                      label: AppStrings.flutterDart,
+                      skillLevel: 1.0,
                       description: AppStrings.flutterDesc),
                 ),
                 Container(
@@ -40,48 +40,48 @@ class SkillsInfo extends StatelessWidget {
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.iosSdk,
-                      skillLevel: 0.85,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 1.0,
+                      description: AppStrings.iOSDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.androidSdk,
-                      skillLevel: 0.7,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 0.9,
+                      description: AppStrings.androidDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.swift,
-                      skillLevel: 0.85,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 0.9,
+                      description: AppStrings.swiftDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.objC,
-                      skillLevel: 0.6,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 0.7,
+                      description: AppStrings.objCDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.kotlin,
-                      skillLevel: 0.7,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 0.8,
+                      description: AppStrings.kotlinDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: width >= 768 ? width / 2.5 : width),
                   child: const SkillTile(
                       label: AppStrings.agile,
-                      skillLevel: 0.9,
-                      description: AppStrings.flutterDesc),
+                      skillLevel: 1.0,
+                      description: AppStrings.agileDesc),
                 ),
                 Container(
                   constraints: BoxConstraints(
@@ -89,7 +89,15 @@ class SkillsInfo extends StatelessWidget {
                   child: const SkillTile(
                       label: AppStrings.tdd,
                       skillLevel: 0.9,
-                      description: AppStrings.flutterDesc),
+                      description: AppStrings.tddDesc),
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                      maxWidth: width >= 768 ? width / 2.5 : width),
+                  child: const SkillTile(
+                      label: AppStrings.devOps,
+                      skillLevel: 0.9,
+                      description: AppStrings.devOpsDesc),
                 ),
               ],
             ),
