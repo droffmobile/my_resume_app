@@ -70517,7 +70517,7 @@ A.RK.prototype={
 $1(a){return new A.mC(new A.RJ(),null)},
 $S:420}
 A.RJ.prototype={
-$1(a){return $.Br().fQ(0,"pdf/droff_resume.pdf").bq(new A.RI(),t.H3)},
+$1(a){return $.Br().fQ(0,"assets/pdf/droff_resume.pdf").bq(new A.RI(),t.H3)},
 $S:421}
 A.RI.prototype={
 $1(a){return A.cy(a.buffer,0,null)},
