@@ -31,86 +31,82 @@ class ResumeHeader extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(16),
-          child: Row(
+          child: Wrap(
+            spacing: 100,
             children: [
-              Wrap(
-                spacing: 100,
+              const CircleAvatar(
+                radius: 200,
+                backgroundImage: AssetImage('assets/images/my_photo.jpg'),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CircleAvatar(
-                    radius: 200,
-                    backgroundImage: AssetImage('assets/images/my_photo.jpg'),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(AppStrings.whoIAm,
-                          style: TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white30)),
-                      const SizedBox(height: 20),
-                      const Text(AppStrings.whatIDo,
-                          style: TextStyle(
-                            fontSize: 36,
-                            color: Colors.white30,
-                          )),
-                      const SizedBox(height: 10),
-                      const Text.rich(
+                  const Text(AppStrings.whoIAm,
+                      style: TextStyle(
+                          fontSize: 48,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white30)),
+                  const SizedBox(height: 20),
+                  const Text(AppStrings.whatIDo,
+                      style: TextStyle(
+                        fontSize: 36,
+                        color: Colors.white30,
+                      )),
+                  const SizedBox(height: 10),
+                  const Text.rich(
+                    TextSpan(
+                      children: [
                         TextSpan(
-                          children: [
-                            TextSpan(
-                              text: AppStrings.flutter,
-                              style: TextStyle(color: Color(0xFF5FC5F5)),
-                            ),
-                            TextSpan(
-                              text: AppStrings.divider,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white30),
-                            ),
-                            TextSpan(
-                              text: AppStrings.iOS,
-                              style: TextStyle(color: Color(0xFF1D71F1)),
-                            ),
-                            TextSpan(
-                              text: AppStrings.divider,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white30),
-                            ),
-                            TextSpan(
-                              text: AppStrings.android,
-                              style: TextStyle(color: Color(0xFF3ddc84)),
-                            ),
-                          ],
+                          text: AppStrings.flutter,
+                          style: TextStyle(color: Color(0xFF5FC5F5)),
+                        ),
+                        TextSpan(
+                          text: AppStrings.divider,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white30),
+                        ),
+                        TextSpan(
+                          text: AppStrings.iOS,
+                          style: TextStyle(color: Color(0xFF1D71F1)),
+                        ),
+                        TextSpan(
+                          text: AppStrings.divider,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white30),
+                        ),
+                        TextSpan(
+                          text: AppStrings.android,
+                          style: TextStyle(color: Color(0xFF3ddc84)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      GestureDetector(
+                        onTap: _launchLinkedIn,
+                        child: SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                            'assets/images/linkedin.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          GestureDetector(
-                            onTap: _launchLinkedIn,
-                            child: SizedBox(
-                              height: 20,
-                              width: 20,
-                              child: Image.asset(
-                                'assets/images/linkedin.png',
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          GestureDetector(
-                            onTap: _mailTo,
-                            child: const Icon(
-                              Icons.email_outlined,
-                              size: 20,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ],
+                      const SizedBox(width: 12),
+                      GestureDetector(
+                        onTap: _mailTo,
+                        child: const Icon(
+                          Icons.email_outlined,
+                          size: 20,
+                          color: Colors.white70,
+                        ),
                       ),
                     ],
                   ),
