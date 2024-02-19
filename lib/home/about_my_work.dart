@@ -58,7 +58,7 @@ class AboutMyWork extends StatelessWidget {
                     builder: (context) {
                       return PdfPreview(
                           build: (format) => rootBundle
-                              .load('pdf/droff_resume.pdf')
+                              .load('assets/pdf/droff_resume.pdf')
                               .then((value) => value.buffer.asUint8List()));
                     },
                   ),
