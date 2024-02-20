@@ -249,13 +249,14 @@ packages:
     source: hosted
     version: "1.0.1"
   pdf:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: pdf
-      sha256: "93cbb2c06de9bab91844550f19896b2373e7a5ce25173995e7e5ec5e1741429d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.10.7"
+      path: pdf
+      ref: master
+      resolved-ref: "19d9f4bf6e5dc69e53799681c062970f62b3eef9"
+      url: "https://github.com/DavBfr/dart_pdf.git"
+    source: git
+    version: "3.10.8"
   petitparser:
     dependency: transitive
     description:
